@@ -1,0 +1,235 @@
+<title>Y.L. Accounting Profile</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Senior Accounting Specialist in Tokyo — 11+ years in accounting, audit, IFRS / J-GAAP reporting and process automation.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+/* Layout: a conventional one-column résumé — header, then titled sections; company left, dates right */
+:root{
+  --bg:#F3F5F8; --page:#FFFFFF; --ink:#1E2833; --muted:#5D6875; --rule:#DCE1E7; --accent:#1F3A5F;
+  --f-body:"Noto Sans JP","Noto Sans TC","Hiragino Sans","PingFang TC","Microsoft JhengHei","Yu Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1419; --page:#171D24; --ink:#E4E8ED; --muted:#9AA5B1; --rule:#2B343E; --accent:#8DB4E2; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1419; --page:#171D24; --ink:#E4E8ED; --muted:#9AA5B1; --rule:#2B343E; --accent:#8DB4E2; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.7;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 40px}
+html[lang="zh-Hant"] body{--f-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei","Noto Sans JP",system-ui,sans-serif}
+html[lang="ja"] .en, html[lang="ja"] .zh,
+html[lang="en"] .ja, html[lang="en"] .zh,
+html[lang="zh-Hant"] .ja, html[lang="zh-Hant"] .en{display:none!important}
+
+.topbar{max-width:860px;margin:0 auto;display:flex;justify-content:flex-end;padding-block:14px}
+.lang{display:flex;border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:var(--page)}
+.lang button{font:500 13px var(--f-body);background:transparent;color:var(--muted);border:0;padding:6px 14px;cursor:pointer}
+.lang button + button{border-left:1px solid var(--rule)}
+.lang button[aria-pressed="true"]{background:var(--accent);color:var(--page)}
+.lang button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+
+.page{max-width:860px;margin:0 auto;background:var(--page);border:1px solid var(--rule);border-radius:4px;padding:40px clamp(18px,5vw,48px)}
+
+header.cv{border-bottom:2px solid var(--accent);padding-bottom:18px}
+header.cv h1{font-size:28px;font-weight:700;margin:0;letter-spacing:.02em}
+header.cv .title{font-size:16px;font-weight:500;color:var(--accent);margin:2px 0 6px}
+header.cv .sub{color:var(--muted);font-size:14px;margin:0}
+
+section{margin-top:28px}
+h2{font-size:15px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;
+  border-bottom:1px solid var(--rule);padding-bottom:6px;margin:0 0 12px}
+p{margin:0 0 8px}
+
+.kv{width:100%;border-collapse:collapse;font-size:14.5px}
+.kv th,.kv td{text-align:left;vertical-align:top;padding:6px 0;border-bottom:1px solid var(--rule)}
+.kv tr:last-child th,.kv tr:last-child td{border-bottom:0}
+.kv th{width:32%;font-weight:500;color:var(--muted);padding-right:12px}
+
+.job{padding-block:12px;border-bottom:1px solid var(--rule)}
+.job:last-child{border-bottom:0}
+.job-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 16px;align-items:baseline}
+.job-head h3{font-size:16px;font-weight:700;margin:0;min-width:0}
+.job-head .date{font-size:13.5px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.job .role{font-size:14px;color:var(--muted);margin:0 0 6px}
+.job ul{margin:0;padding-left:1.2em}
+.job li{margin-block:2px}
+.job .hl{margin:0 0 4px}
+
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.skills > div{min-width:0}
+.skills h3{font-size:14px;font-weight:700;margin:12px 0 4px}
+.skills ul{margin:0;padding-left:1.2em}
+@media (max-width:600px){.skills{grid-template-columns:1fr}.kv th{width:40%}}
+
+.contact{font-size:14.5px;color:var(--muted)}
+footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text-align:center}
+</style>
+
+<div class="topbar">
+  <div class="lang" role="group" aria-label="Language">
+    <button id="btn-ja" type="button" data-l="ja" aria-pressed="true">日本語</button>
+    <button id="btn-en" type="button" data-l="en" aria-pressed="false">English</button>
+    <button id="btn-zh" type="button" data-l="zh-Hant" aria-pressed="false">中文</button>
+  </div>
+</div>
+
+<main class="page">
+  <header class="cv">
+    <h1>Y.L.</h1>
+    <p class="title"><span class="ja">シニア経理スペシャリスト</span><span class="en">Senior Accounting Specialist</span><span class="zh">資深會計專員</span></p>
+    <p class="sub"><span class="ja">東京 ｜ 会計・監査 11年以上 ｜ IFRS・J-GAAP ｜ 中国語・日本語・英語</span><span class="en">Tokyo | 11+ years in accounting &amp; audit | IFRS / J-GAAP | Chinese, Japanese, English</span><span class="zh">東京 ｜ 會計・審計 11 年以上 ｜ IFRS・J-GAAP ｜ 中文・日文・英文</span></p>
+  </header>
+
+  <section id="summary">
+    <h2><span class="ja">職務要約</span><span class="en">Summary</span><span class="zh">個人簡介</span></h2>
+    <p class="ja">PwC台湾での監査経験と、台湾・中国・香港・日本の事業会社での経理実務を合わせて11年以上の経験があります。月次・年次決算、IFRS／J-GAAP財務諸表の作成を中心に、日本法人では唯一の経理担当として税務・銀行・対外対応まで一貫して担当しています。Excel VBAやAIツールを活用した定型業務の効率化を得意としています。</p>
+    <p class="en">Accounting professional with 11+ years of experience, combining audit work at PwC Taiwan with in-house accounting in Taiwan, China, Hong Kong and Japan. Focused on monthly and annual closing and IFRS / J-GAAP financial statements; currently the sole accountant for a Japan subsidiary, handling tax, banking and external contacts end to end. Skilled at streamlining recurring work with Excel VBA and AI tools.</p>
+    <p class="zh">具備 11 年以上會計經驗，結合 PwC 台灣的審計經歷與台灣、中國、香港、日本的企業端實務。以月／年度結算、IFRS／J-GAAP 財務報表編製為核心，目前擔任日本分公司唯一會計，一手負責稅務、銀行與對外窗口。擅長運用 Excel VBA 與 AI 工具提升例行作業效率。</p>
+  </section>
+
+  <section id="seeking">
+    <h2><span class="ja">希望条件</span><span class="en">Desired Position</span><span class="zh">求職條件</span></h2>
+    <table class="kv">
+      <tr><th><span class="ja">職種</span><span class="en">Role</span><span class="zh">職務</span></th><td><span class="ja">経理・財務（スペシャリスト職）</span><span class="en">Accounting / Finance (individual contributor)</span><span class="zh">會計・財務（專業職）</span></td></tr>
+      <tr><th><span class="ja">企業</span><span class="en">Company</span><span class="zh">企業類型</span></th><td><span class="ja">外資系企業</span><span class="en">Foreign-affiliated company</span><span class="zh">外商企業</span></td></tr>
+      <tr><th><span class="ja">勤務地・働き方</span><span class="en">Location / Work style</span><span class="zh">地點・工作型態</span></th><td><span class="ja">東京／ハイブリッドまたはリモート</span><span class="en">Tokyo / hybrid or remote</span><span class="zh">東京／混合或遠端辦公</span></td></tr>
+      <tr><th><span class="ja">語学</span><span class="en">Language</span><span class="zh">語言</span></th><td><span class="ja">中国語を活かせる環境を希望</span><span class="en">Prefer roles using Chinese</span><span class="zh">希望能運用中文</span></td></tr>
+      <tr><th><span class="ja">入社時期</span><span class="en">Start date</span><span class="zh">到職時間</span></th><td><span class="ja">2027年</span><span class="en">2027</span><span class="zh">2027 年</span></td></tr>
+    </table>
+  </section>
+
+  <section id="career">
+    <h2><span class="ja">職務経歴</span><span class="en">Professional Experience</span><span class="zh">工作經歷</span></h2>
+
+    <div class="job">
+      <div class="job-head"><h3><span class="ja">台湾系ITハードウェアメーカー 日本法人</span><span class="en">Japan subsidiary of a Taiwanese IT hardware manufacturer</span><span class="zh">台灣 IT 硬體製造商 日本分公司</span></h3><span class="date">2024.11 – <span class="ja">現在</span><span class="en">Present</span><span class="zh">至今</span></span></div>
+      <p class="role"><span class="ja">シニア経理スペシャリスト（東京）</span><span class="en">Senior Accounting Specialist, Tokyo</span><span class="zh">資深會計專員（東京）</span></p>
+      <ul class="ja">
+        <li>日本法人の現地唯一の経理担当として、会計・税務調整・銀行業務・対外窓口を担当</li>
+        <li>月次・年次決算、IFRS・J-GAAP財務諸表および報告資料の作成</li>
+        <li>SAPデータから日本の税務会計帳簿への変換をExcel VBAで仕組み化</li>
+        <li>PDF証憑を伝票番号・取引先・金額で照合し、ファイル名を自動変更するツールを作成</li>
+        <li>会計伝票、経費精算、税務申告、予算、小口現金管理／税理士・銀行・官公庁との調整</li>
+      </ul>
+      <ul class="en">
+        <li>Sole local accountant for the Japan entity, covering accounting, tax coordination, banking and external contacts</li>
+        <li>Monthly / annual closing; IFRS and J-GAAP financial statements and reporting packages</li>
+        <li>Built an Excel VBA workflow converting SAP data into Japanese tax-basis books</li>
+        <li>Built a tool that matches PDF vouchers to the ledger by voucher no., vendor and amount and renames files automatically</li>
+        <li>Journals, expenses, tax filings, budgets, petty cash; liaison with tax accountants, banks and authorities</li>
+      </ul>
+      <ul class="zh">
+        <li>日本分公司在地唯一會計，負責帳務、稅務協調、銀行業務與對外窗口</li>
+        <li>月／年度結算，編製 IFRS 及 J-GAAP 財務報表與報告資料</li>
+        <li>以 Excel VBA 建立 SAP 資料轉換為日本稅務帳簿的流程</li>
+        <li>製作工具：依傳票編號、供應商、金額對應 PDF 憑證並自動更改檔名</li>
+        <li>會計傳票、費用報銷、稅務申告、預算、零用金管理；與稅理士、銀行、政府機關協調</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3><span class="ja">事業会社 2社（日本）</span><span class="en">Two operating companies, Japan</span><span class="zh">日本企業 2 家</span></h3><span class="date">2024.01 – 2024.10</span></div>
+      <p class="role"><span class="ja">経理・ITスペシャリスト／経理スペシャリスト（東京）</span><span class="en">Accounting &amp; IT Specialist / Accounting Specialist, Tokyo</span><span class="zh">會計暨 IT 專員／會計專員（東京）</span></p>
+      <ul class="ja"><li>月次・年次決算、IFRS・J-GAAP財務諸表の作成、月次税務申告</li><li>買掛金、経費精算、予算管理、増資プロジェクトの評価、IT部門サポート</li><li>輸出入取引に関わる会計・書類業務</li></ul>
+      <ul class="en"><li>Monthly / annual closing, IFRS and J-GAAP statements, monthly tax filings</li><li>AP, expenses, budgeting, capital-increase evaluation, IT support</li><li>Accounting and documentation for import / export transactions</li></ul>
+      <ul class="zh"><li>月／年度結算、IFRS 及 J-GAAP 財務報表編製、每月稅務申告</li><li>應付帳款、費用報銷、預算管理、增資專案評估、IT 部門支援</li><li>進出口交易相關的會計與文件作業</li></ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3>X&amp;T Co., Ltd.</h3><span class="date">2020.03 – 2023.06</span></div>
+      <p class="role"><span class="ja">経理スーパーバイザー（大阪）</span><span class="en">Accounting Supervisor, Osaka</span><span class="zh">會計主管（大阪）</span></p>
+      <ul class="ja"><li>創業期の唯一の経理として財務報告書の形式を設計し、月次レポート作成を自動化</li><li>財務諸表の作成・確認、経営成績の報告</li><li>新入社員の業務指導、定型レポート業務の改善</li></ul>
+      <ul class="en"><li>As sole accountant in the start-up stage, designed the financial-report format and automated monthly reporting</li><li>Financial statement preparation, review and management reporting</li><li>Trained new staff; improved recurring reporting processes</li></ul>
+      <ul class="zh"><li>草創期唯一會計，設計財務報表格式並將每月報表作業自動化</li><li>財務報表編製、確認與經營成果報告</li><li>新進員工指導，改善例行性報表流程</li></ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3><span class="ja">事業会社 4社（台湾・中国・香港）</span><span class="en">Four companies, Taiwan / China / Hong Kong</span><span class="zh">台灣、中國、香港企業 4 家</span></h3><span class="date">2017.02 – 2019.09</span></div>
+      <p class="role"><span class="ja">経理マネージャー／経理・人事スペシャリスト／経理スペシャリスト</span><span class="en">Accounting Manager / Accounting &amp; HR Specialist / Accounting Specialist</span><span class="zh">會計經理／會計暨人資專員／會計專員</span></p>
+      <ul class="ja"><li>深圳・香港の唯一の経理として、給与・社会保険・人事・税関業務も兼任</li><li>台湾本社の売掛・買掛管理、固定資産管理の再整備を主導</li><li>資金繰り、差異分析、事業税・源泉税申告</li></ul>
+      <ul class="en"><li>Sole accountant for Shenzhen and Hong Kong, also covering payroll, social insurance, HR and customs</li><li>Managed parent-company AR / AP in Taiwan; led a fixed-asset management overhaul</li><li>Cash management, variance analysis, business and withholding tax filings</li></ul>
+      <ul class="zh"><li>深圳與香港唯一會計，兼任薪資、社會保險、人事及海關業務</li><li>負責台灣母公司應收應付，主導固定資產管理重整</li><li>資金調度、差異分析、營業稅與扣繳申報</li></ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3>Everlight Electronics Co., Ltd.</h3><span class="date">2016.12 – 2017.01</span></div>
+      <p class="role"><span class="ja">内部監査担当（台北）</span><span class="en">Internal Auditor, Taipei</span><span class="zh">內部稽核員（台北）</span></p>
+      <ul class="ja"><li>内部統制評価、IFRS準拠性確認、リスク評価と改善提案</li></ul>
+      <ul class="en"><li>Internal-control assessment, IFRS compliance checks, risk assessment and recommendations</li></ul>
+      <ul class="zh"><li>內部控制評估、IFRS 遵循確認、風險評估與改善建議</li></ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3>PwC Taiwan</h3><span class="date">2014.01 – 2016.08</span></div>
+      <p class="role"><span class="ja">監査チームリーダー（台湾／海外出張）</span><span class="en">Audit Team Leader, Taiwan / overseas travel</span><span class="zh">審計組長（台灣／海外出差）</span></p>
+      <ul class="ja"><li>上場企業の監査に従事し、上場準備企業の監査業務をリード</li><li>財務諸表監査・内部統制監査、税務申告書作成</li><li>クライアント対応、進捗管理、論点のフォロー</li></ul>
+      <ul class="en"><li>Audited listed companies and led the audit of a company preparing for public listing</li><li>Financial statement and internal-control audits; tax return preparation</li><li>Client communication, audit progress and issue follow-up</li></ul>
+      <ul class="zh"><li>參與上市公司審計，並帶領準備公開發行公司的查核工作</li><li>財務報表與內部控制審計、稅務申報書編製</li><li>客戶溝通、查核進度與問題追蹤</li></ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3><span class="ja">会計事務所・大学</span><span class="en">CPA firms and a university</span><span class="zh">會計師事務所・大學</span></h3><span class="date">2011 – 2016</span></div>
+      <p class="role" style="margin:0"><span class="ja">記帳、税務申告、大学の経理業務およびティーチング・アシスタント</span><span class="en">Bookkeeping, tax filings, university accounting work and teaching assistance</span><span class="zh">記帳、稅務申報、大學會計作業及助教</span></p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2><span class="ja">スキル・資格</span><span class="en">Skills &amp; Certifications</span><span class="zh">技能・證照</span></h2>
+    <div class="skills">
+      <div>
+        <h3><span class="ja">専門スキル</span><span class="en">Professional</span><span class="zh">專業技能</span></h3>
+        <ul class="ja"><li>月次・年次決算、IFRS／J-GAAP財務報告</li><li>監査・内部統制、原因分析</li><li>税務申告、銀行業務、対外調整</li><li>業務改善・定型業務の自動化</li></ul>
+        <ul class="en"><li>Monthly / annual closing, IFRS / J-GAAP reporting</li><li>Audit, internal control, root-cause analysis</li><li>Tax filings, banking, external coordination</li><li>Process improvement and automation</li></ul>
+        <ul class="zh"><li>月／年度結算、IFRS／J-GAAP 財務報告</li><li>審計、內部控制、根因分析</li><li>稅務申報、銀行業務、對外協調</li><li>流程改善與例行作業自動化</li></ul>
+        <h3><span class="ja">システム</span><span class="en">Systems</span><span class="zh">系統工具</span></h3>
+        <ul class="ja"><li>SAP ほか台湾・日本の会計／ERPシステム</li><li>Excel（上級・VBAマクロ）、Word、PowerPoint</li><li>AIツールを活用した業務効率化</li></ul>
+        <ul class="en"><li>SAP and other Taiwan / Japan accounting and ERP systems</li><li>Excel (advanced, VBA macros), Word, PowerPoint</li><li>AI tools for workflow efficiency</li></ul>
+        <ul class="zh"><li>SAP 及台灣・日本各類會計／ERP 系統</li><li>Excel（進階・VBA 巨集）、Word、PowerPoint</li><li>運用 AI 工具提升作業效率</li></ul>
+      </div>
+      <div>
+        <h3><span class="ja">語学</span><span class="en">Languages</span><span class="zh">語言</span></h3>
+        <table class="kv">
+          <tr><th><span class="ja">中国語</span><span class="en">Chinese</span><span class="zh">中文</span></th><td><span class="ja">ネイティブ</span><span class="en">Native</span><span class="zh">母語</span></td></tr>
+          <tr><th><span class="ja">日本語</span><span class="en">Japanese</span><span class="zh">日文</span></th><td><span class="ja">JLPT N2（N1 学習中）</span><span class="en">JLPT N2 (studying for N1)</span><span class="zh">JLPT N2（準備 N1 中）</span></td></tr>
+          <tr><th><span class="ja">英語</span><span class="en">English</span><span class="zh">英文</span></th><td><span class="ja">日常会話・業務メール</span><span class="en">Conversational, business email</span><span class="zh">日常會話・商務郵件</span></td></tr>
+        </table>
+        <h3><span class="ja">資格</span><span class="en">Certification</span><span class="zh">證照</span></h3>
+        <ul class="ja"><li>日商簿記検定 2級</li></ul>
+        <ul class="en"><li>JCCI Bookkeeping Test, Level 2</li></ul>
+        <ul class="zh"><li>日本商工會議所簿記檢定 2 級</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2><span class="ja">学歴</span><span class="en">Education</span><span class="zh">學歷</span></h2>
+    <div class="job">
+      <div class="job-head"><h3><span class="ja">逢甲大学 会計学修士</span><span class="en">M.S. in Accounting, Feng Chia University</span><span class="zh">逢甲大學 會計學碩士</span></h3><span class="date">2011 – 2013</span></div>
+    </div>
+    <div class="job">
+      <div class="job-head"><h3><span class="ja">国立高雄第一科技大学 会計情報学士</span><span class="en">B.S. in Accounting Information, National Kaohsiung First Univ. of Sci. &amp; Tech.</span><span class="zh">國立高雄第一科技大學 會計資訊學士</span></h3><span class="date">2007 – 2011</span></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2><span class="ja">連絡先</span><span class="en">Contact</span><span class="zh">聯絡方式</span></h2>
+    <p class="contact ja">個人情報保護のため、氏名・連絡先は掲載していません。本ページをご覧になった求人媒体またはエージェント経由でご連絡ください。詳細な履歴書・職務経歴書は面談時にお渡しします。</p>
+    <p class="contact en">Name and contact details are withheld for privacy. Please reach out through the job platform or agent where you found this page. A full résumé is available on request.</p>
+    <p class="contact zh">為保護個人資訊，本頁不公開姓名與聯絡方式。請透過您看到此頁面的求職平台或獵頭與我聯繫，面談時可提供完整履歷。</p>
+  </section>
+</main>
+
+<footer>© Y.L. · Senior Accounting Specialist · Tokyo</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btns=document.querySelectorAll('.lang button'), ok=['ja','en','zh-Hant'];
+  function set(l){root.lang=l;btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l?'true':'false')});try{localStorage.setItem('lang',l)}catch(e){}}
+  var saved=null;try{saved=localStorage.getItem('lang')}catch(e){}
+  set(ok.indexOf(saved)>-1?saved:'ja');
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.l)})});
+})();
+</script>
