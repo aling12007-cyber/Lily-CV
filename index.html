@@ -78,9 +78,15 @@ p{margin:0 0 8px}
 .contact{font-size:14.5px;color:var(--muted)}
 footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text-align:center}
 
-/* Keep the résumé focused on highlighted experience; short-term roles remain in source but are not displayed. */
-.short-career-pair,.short-job-entry,details.short-job{display:none!important}
-.career-controls{display:none!important}
+/* Short-term roles are hidden by default and shown together on request. */
+#career .short-career-pair,#career .short-job-entry,#career details.short-job{display:none}
+#career.show-short .short-career-pair{display:block}
+#career.show-short .short-job-entry{display:block}
+#career.show-short details.short-job{display:block}
+.career-controls{display:flex;justify-content:flex-end;margin:0 0 8px}
+.career-toggle{font:500 13px var(--f-body);color:var(--accent);background:var(--page);border:1px solid var(--rule);border-radius:6px;padding:7px 12px;cursor:pointer}
+.career-toggle:hover{border-color:var(--accent)}
+.career-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 </style>
 </head>
 <body>
@@ -123,6 +129,13 @@ footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text
 
   <section id="career">
     <h2><span class="ja">職務経歴</span><span class="en">Professional Experience</span><span class="zh">工作經歷</span></h2>
+    <div class="career-controls">
+      <button class="career-toggle" id="career-toggle" type="button" aria-expanded="false">
+        <span class="ja toggle-show">短期経歴を表示</span><span class="ja toggle-hide" hidden>短期経歴を隠す</span>
+        <span class="en toggle-show">Show short-term experience</span><span class="en toggle-hide" hidden>Hide short-term experience</span>
+        <span class="zh toggle-show">展開短期經歷</span><span class="zh toggle-hide" hidden>隱藏短期經歷</span>
+      </button>
+    </div>
 <div class="job featured-job">
       <div class="job-head"><h3><span class="ja">台湾系ITハードウェアメーカーの日本法人</span><span class="en">Japan subsidiary of a Taiwanese IT hardware manufacturer</span><span class="zh">台灣 IT 硬體製造商日本子公司</span></h3><span class="date">2024.11 – <span class="ja">現在</span><span class="en">Present</span><span class="zh">至今</span></span></div>
       <p class="role"><span class="ja">シニア経理スペシャリスト（東京）</span><span class="en">Senior Accounting Specialist, Tokyo</span><span class="zh">資深會計專員（東京）</span></p>
@@ -276,23 +289,17 @@ footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text
   set(ok.indexOf(saved)>-1?saved:'ja');
   btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.l)})});
 
+  var career=document.getElementById('career');
   var careerToggle=document.getElementById('career-toggle');
-  var shortJobs=document.querySelectorAll('#career details.short-job');
-  function updateCareerToggle(expanded){
-    careerToggle.setAttribute('aria-expanded',String(expanded));
-    careerToggle.querySelectorAll('.toggle-show').forEach(function(el){el.hidden=expanded});
-    careerToggle.querySelectorAll('.toggle-hide').forEach(function(el){el.hidden=!expanded});
+  if(career && careerToggle){
+    careerToggle.addEventListener('click',function(){
+      var expanded=careerToggle.getAttribute('aria-expanded')!=='true';
+      career.classList.toggle('show-short',expanded);
+      careerToggle.setAttribute('aria-expanded',String(expanded));
+      careerToggle.querySelectorAll('.toggle-show').forEach(function(el){el.hidden=expanded});
+      careerToggle.querySelectorAll('.toggle-hide').forEach(function(el){el.hidden=!expanded});
+    });
   }
-  careerToggle.addEventListener('click',function(){
-    var expand=careerToggle.getAttribute('aria-expanded')!=='true';
-    shortJobs.forEach(function(job){job.open=expand});
-    updateCareerToggle(expand);
-  });
-  shortJobs.forEach(function(job){
-    var summary=job.querySelector('summary');
-    summary.addEventListener('click',function(event){event.preventDefault()});
-    summary.removeAttribute('tabindex');
-  });
 })();
 </script>
 </body>
