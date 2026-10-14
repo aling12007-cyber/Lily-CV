@@ -66,6 +66,15 @@ p{margin:0 0 8px}
 
 .contact{font-size:14.5px;color:var(--muted)}
 footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text-align:center}
+
+.short-experience{margin-top:14px;border:1px solid var(--rule);border-radius:4px;background:var(--page)}
+.short-experience summary{cursor:pointer;list-style:none;padding:12px 14px;color:var(--accent);font-size:14px;font-weight:700}
+.short-experience summary::-webkit-details-marker{display:none}
+.short-experience summary::after{content:"＋";float:right;color:var(--muted)}
+.short-experience[open] summary::after{content:"−"}
+.short-experience-list{padding:0 14px 12px;border-top:1px solid var(--rule)}
+.short-experience-list .job:first-child{margin-top:2px}
+.short-experience summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 </style>
 
 <div class="topbar">
@@ -112,21 +121,6 @@ footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text
       <ul class="zh"><li>擔任日本分公司在地唯一會計，負責帳務、稅務協調、銀行業務及主要對外會計窗口</li><li>負責月／年度結算，編製 IFRS 及 J-GAAP 財務報表與報告資料</li><li>處理會計傳票、費用報銷、稅務申告、預算及零用金管理</li><li>與稅理士、銀行及政府機關聯繫並處理相關文件</li><li>以 Excel VBA 建立 SAP 資料轉換為日本稅務帳簿的流程，並製作 PDF 憑證核對與自動更名工具</li></ul>
     </div>
 
-    <div class="job">
-      <div class="job-head"><h3><span class="ja">領耀株式会社</span><span class="en">Lingyao Co., Ltd.</span><span class="zh">領耀株式會社</span></h3><span class="date">2024.09 – 2024.10</span></div>
-      <p class="role"><span class="ja">経理スペシャリスト（日本）</span><span class="en">Accounting Specialist, Japan</span><span class="zh">會計專員（日本）</span></p>
-      <ul class="ja"><li>経理業務全般を担当</li><li>輸出入取引に関連する会計および書類業務を担当</li></ul>
-      <ul class="en"><li>Handled full-cycle accounting operations</li><li>Handled accounting and documentation related to import and export transactions</li></ul>
-      <ul class="zh"><li>負責全般會計作業</li><li>處理進出口交易相關的會計與文件作業</li></ul>
-    </div>
-
-    <div class="job">
-      <div class="job-head"><h3><span class="ja">AUO Japan株式会社</span><span class="en">AUO Japan Co., Ltd.</span><span class="zh">AUO Japan 株式會社</span></h3><span class="date">2024.01 – 2024.06</span></div>
-      <p class="role"><span class="ja">経理・ITスペシャリスト（東京）</span><span class="en">Accounting &amp; IT Specialist, Tokyo</span><span class="zh">會計暨 IT 專員（東京）</span></p>
-      <ul class="ja"><li>月次・年次決算およびIFRS・J-GAAP財務諸表の作成</li><li>取引先管理、買掛金、経費精算、小口現金、予算管理</li><li>月次税務申告、増資プロジェクトの評価、IT部門サポート</li></ul>
-      <ul class="en"><li>Monthly and annual closing and preparation of IFRS and J-GAAP financial statements</li><li>Vendor management, accounts payable, expense reimbursements, petty cash and budget management</li><li>Monthly tax filings, capital-increase project evaluation and IT department support</li></ul>
-      <ul class="zh"><li>負責月／年度結算及 IFRS、J-GAAP 財務報表編製</li><li>管理供應商、應付帳款、費用報銷、零用金及預算</li><li>辦理每月稅務申告、評估增資專案並支援 IT 部門</li></ul>
-    </div>
 
     <div class="job">
       <div class="job-head"><h3><span class="ja">株式会社X&amp;T</span><span class="en">X&amp;T Co., Ltd.</span><span class="zh">X&amp;T 株式會社</span></h3><span class="date">2020.03 – 2023.06</span></div>
@@ -136,6 +130,7 @@ footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text
       <ul class="zh"><li>草創期主要業務的唯一會計，設計財務報表格式並建立報表自動化流程</li><li>負責財務報表編製、確認與經營成果報告</li><li>指導新進員工並改善重複性報表流程</li></ul>
     </div>
 
+
     <div class="job">
       <div class="job-head"><h3><span class="ja">尊博科技股份有限公司</span><span class="en">Jumbo Technology Co., Ltd.</span><span class="zh">尊博科技股份有限公司</span></h3><span class="date">2018.07 – 2019.09</span></div>
       <p class="role"><span class="ja">経理スペシャリスト（台湾・台中）</span><span class="en">Accounting Specialist, Taichung, Taiwan</span><span class="zh">會計專員（台灣台中）</span></p>
@@ -144,13 +139,6 @@ footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text
       <ul class="zh"><li>負責母公司應收應付，主導固定資產管理重整，並處理分公司銀行業務</li><li>管理應收帳款、應付帳款、發票、資金調度、銀行交易與付款</li><li>辦理結算、差異分析、營業稅與扣繳申報</li></ul>
     </div>
 
-    <div class="job">
-      <div class="job-head"><h3><span class="ja">磐旭智能股份有限公司（台湾支店）</span><span class="en">AMobile Solutions Corp., Taiwan Branch</span><span class="zh">磐旭智能股份有限公司（台灣分公司）</span></h3><span class="date">2018.03 – 2018.05</span></div>
-      <p class="role"><span class="ja">経理マネージャー（中国・深圳）</span><span class="en">Accounting Manager, Shenzhen, China</span><span class="zh">會計經理（中國深圳）</span></p>
-      <ul class="ja"><li>経理業務全般を管理</li><li>会計管理業務および社内調整を担当</li></ul>
-      <ul class="en"><li>Managed full-cycle accounting operations</li><li>Handled accounting management and related internal coordination</li></ul>
-      <ul class="zh"><li>管理全般會計作業</li><li>負責會計管理及相關內部協調作業</li></ul>
-    </div>
 
     <div class="job">
       <div class="job-head"><h3><span class="ja">嶄富科技企業有限公司</span><span class="en">Granstar International Co., Ltd.</span><span class="zh">嶄富科技企業有限公司</span></h3><span class="date">2017.05 – 2018.03</span></div>
@@ -160,29 +148,6 @@ footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text
       <ul class="zh"><li>擔任深圳與香港唯一會計，兼任薪資、社會保險、人事及海關進出口業務</li><li>處理日常會計、供應商／製造商付款及採購出貨資料確認</li><li>計算薪資與社會保險，處理海關／進出口文件，並與會計師事務所、銀行及稅務機關協調</li></ul>
     </div>
 
-    <div class="job">
-      <div class="job-head"><h3><span class="ja">塞席爾商翔佳有限公司</span><span class="en">Xiang Jia Co., Ltd. (Seychelles)</span><span class="zh">塞席爾商翔佳有限公司</span></h3><span class="date">2017.02 – 2017.05</span></div>
-      <p class="role"><span class="ja">経理スペシャリスト（台湾）</span><span class="en">Accounting Specialist, Taiwan</span><span class="zh">會計專員（台灣）</span></p>
-      <ul class="ja"><li>経理業務全般を担当</li></ul>
-      <ul class="en"><li>Handled full-cycle accounting operations</li></ul>
-      <ul class="zh"><li>負責全般會計作業</li></ul>
-    </div>
-
-    <div class="job">
-      <div class="job-head"><h3><span class="ja">億光電子工業股份有限公司</span><span class="en">Everlight Electronics Co., Ltd.</span><span class="zh">億光電子工業股份有限公司</span></h3><span class="date">2016.12 – 2017.01</span></div>
-      <p class="role"><span class="ja">内部監査担当（台湾・台北）</span><span class="en">Internal Auditor, Taipei, Taiwan</span><span class="zh">內部稽核員（台灣台北）</span></p>
-      <ul class="ja"><li>内部統制評価、IFRS・J-GAAP準拠性確認、コンプライアンス監査・リスク評価</li><li>監査報告書の作成および改善提案</li></ul>
-      <ul class="en"><li>Evaluated internal controls and reviewed IFRS / J-GAAP compliance</li><li>Conducted compliance audits and risk assessments; prepared audit reports and management recommendations</li></ul>
-      <ul class="zh"><li>評估內部控制並確認 IFRS／J-GAAP 遵循情況</li><li>執行法令遵循稽核與風險評估，撰寫稽核報告並提出改善建議</li></ul>
-    </div>
-
-    <div class="job">
-      <div class="job-head"><h3><span class="ja">逢甲大学</span><span class="en">Feng Chia University</span><span class="zh">逢甲大學</span></h3><span class="date">2016.09 – 2016.10</span></div>
-      <p class="role"><span class="ja">経理スペシャリスト兼ティーチング・アシスタント（台湾）</span><span class="en">Accounting Specialist &amp; Teaching Assistant, Taiwan</span><span class="zh">會計專員兼助教（台灣）</span></p>
-      <ul class="ja"><li>経理業務全般を担当</li><li>授業後の補習指導および学習支援</li></ul>
-      <ul class="en"><li>Handled full-cycle accounting operations</li><li>Provided after-class tutoring and learning support</li></ul>
-      <ul class="zh"><li>負責全般會計作業</li><li>提供課後輔導與學習支援</li></ul>
-    </div>
 
     <div class="job">
       <div class="job-head"><h3><span class="ja">PwC台湾（資誠聯合会計師事務所）</span><span class="en">PwC Taiwan</span><span class="zh">PwC 台灣（資誠聯合會計師事務所）</span></h3><span class="date">2014.01 – 2016.08</span></div>
@@ -192,21 +157,83 @@ footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text
       <ul class="zh"><li>參與上市公司審計，並帶領準備公開發行／上櫃公司的查核工作</li><li>執行財務報表與內部控制審計，編製稅務申報書</li><li>負責客戶溝通、查核進度與問題追蹤</li></ul>
     </div>
 
-    <div class="job">
-      <div class="job-head"><h3><span class="ja">建鈞聯合會計師事務所</span><span class="en">Jianjun United CPA Firm</span><span class="zh">建鈞聯合會計師事務所</span></h3><span class="date">2013.10 – 2013.11</span></div>
-      <p class="role"><span class="ja">会計アソシエイト（台湾）</span><span class="en">Accounting Associate, Taiwan</span><span class="zh">會計專員（台灣）</span></p>
-      <ul class="ja"><li>記帳および会計帳簿の作成</li><li>税務申告書の作成・申告</li></ul>
-      <ul class="en"><li>Handled bookkeeping and accounting records</li><li>Prepared and filed tax returns</li></ul>
-      <ul class="zh"><li>負責記帳及會計帳務處理</li><li>辦理稅務申報</li></ul>
-    </div>
 
-    <div class="job">
-      <div class="job-head"><h3><span class="ja">誠泰聯合會計師事務所</span><span class="en">Chengtai United CPA Firm</span><span class="zh">誠泰聯合會計師事務所</span></h3><span class="date">2011.07 – 2011.09</span></div>
-      <p class="role"><span class="ja">会計アソシエイト（台湾）</span><span class="en">Accounting Associate, Taiwan</span><span class="zh">會計專員（台灣）</span></p>
-      <ul class="ja"><li>記帳および会計帳簿の作成</li><li>税務申告書の作成・申告</li></ul>
-      <ul class="en"><li>Handled bookkeeping and accounting records</li><li>Prepared and filed tax returns</li></ul>
-      <ul class="zh"><li>負責記帳及會計帳務處理</li><li>辦理稅務申報</li></ul>
-    </div>
+    <details class="short-experience">
+      <summary><span class="ja">1年未満の職務経歴を表示（8件）</span><span class="en">Show experience under one year (8)</span><span class="zh">展開未滿一年之工作經歷（8 筆）</span></summary>
+      <div class="short-experience-list">
+        <div class="job">
+          <div class="job-head"><h3><span class="ja">領耀株式会社</span><span class="en">Lingyao Co., Ltd.</span><span class="zh">領耀株式會社</span></h3><span class="date">2024.09 – 2024.10</span></div>
+          <p class="role"><span class="ja">経理スペシャリスト（日本）</span><span class="en">Accounting Specialist, Japan</span><span class="zh">會計專員（日本）</span></p>
+          <ul class="ja"><li>経理業務全般を担当</li><li>輸出入取引に関連する会計および書類業務を担当</li></ul>
+          <ul class="en"><li>Handled full-cycle accounting operations</li><li>Handled accounting and documentation related to import and export transactions</li></ul>
+          <ul class="zh"><li>負責全般會計作業</li><li>處理進出口交易相關的會計與文件作業</li></ul>
+        </div>
+
+
+        <div class="job">
+          <div class="job-head"><h3><span class="ja">AUO Japan株式会社</span><span class="en">AUO Japan Co., Ltd.</span><span class="zh">AUO Japan 株式會社</span></h3><span class="date">2024.01 – 2024.06</span></div>
+          <p class="role"><span class="ja">経理・ITスペシャリスト（東京）</span><span class="en">Accounting &amp; IT Specialist, Tokyo</span><span class="zh">會計暨 IT 專員（東京）</span></p>
+          <ul class="ja"><li>月次・年次決算およびIFRS・J-GAAP財務諸表の作成</li><li>取引先管理、買掛金、経費精算、小口現金、予算管理</li><li>月次税務申告、増資プロジェクトの評価、IT部門サポート</li></ul>
+          <ul class="en"><li>Monthly and annual closing and preparation of IFRS and J-GAAP financial statements</li><li>Vendor management, accounts payable, expense reimbursements, petty cash and budget management</li><li>Monthly tax filings, capital-increase project evaluation and IT department support</li></ul>
+          <ul class="zh"><li>負責月／年度結算及 IFRS、J-GAAP 財務報表編製</li><li>管理供應商、應付帳款、費用報銷、零用金及預算</li><li>辦理每月稅務申告、評估增資專案並支援 IT 部門</li></ul>
+        </div>
+
+
+        <div class="job">
+          <div class="job-head"><h3><span class="ja">磐旭智能股份有限公司（台湾支店）</span><span class="en">AMobile Solutions Corp., Taiwan Branch</span><span class="zh">磐旭智能股份有限公司（台灣分公司）</span></h3><span class="date">2018.03 – 2018.05</span></div>
+          <p class="role"><span class="ja">経理マネージャー（中国・深圳）</span><span class="en">Accounting Manager, Shenzhen, China</span><span class="zh">會計經理（中國深圳）</span></p>
+          <ul class="ja"><li>経理業務全般を管理</li><li>会計管理業務および社内調整を担当</li></ul>
+          <ul class="en"><li>Managed full-cycle accounting operations</li><li>Handled accounting management and related internal coordination</li></ul>
+          <ul class="zh"><li>管理全般會計作業</li><li>負責會計管理及相關內部協調作業</li></ul>
+        </div>
+
+
+        <div class="job">
+          <div class="job-head"><h3><span class="ja">塞席爾商翔佳有限公司</span><span class="en">Xiang Jia Co., Ltd. (Seychelles)</span><span class="zh">塞席爾商翔佳有限公司</span></h3><span class="date">2017.02 – 2017.05</span></div>
+          <p class="role"><span class="ja">経理スペシャリスト（台湾）</span><span class="en">Accounting Specialist, Taiwan</span><span class="zh">會計專員（台灣）</span></p>
+          <ul class="ja"><li>経理業務全般を担当</li></ul>
+          <ul class="en"><li>Handled full-cycle accounting operations</li></ul>
+          <ul class="zh"><li>負責全般會計作業</li></ul>
+        </div>
+
+
+        <div class="job">
+          <div class="job-head"><h3><span class="ja">億光電子工業股份有限公司</span><span class="en">Everlight Electronics Co., Ltd.</span><span class="zh">億光電子工業股份有限公司</span></h3><span class="date">2016.12 – 2017.01</span></div>
+          <p class="role"><span class="ja">内部監査担当（台湾・台北）</span><span class="en">Internal Auditor, Taipei, Taiwan</span><span class="zh">內部稽核員（台灣台北）</span></p>
+          <ul class="ja"><li>内部統制評価、IFRS・J-GAAP準拠性確認、コンプライアンス監査・リスク評価</li><li>監査報告書の作成および改善提案</li></ul>
+          <ul class="en"><li>Evaluated internal controls and reviewed IFRS / J-GAAP compliance</li><li>Conducted compliance audits and risk assessments; prepared audit reports and management recommendations</li></ul>
+          <ul class="zh"><li>評估內部控制並確認 IFRS／J-GAAP 遵循情況</li><li>執行法令遵循稽核與風險評估，撰寫稽核報告並提出改善建議</li></ul>
+        </div>
+
+
+        <div class="job">
+          <div class="job-head"><h3><span class="ja">逢甲大学</span><span class="en">Feng Chia University</span><span class="zh">逢甲大學</span></h3><span class="date">2016.09 – 2016.10</span></div>
+          <p class="role"><span class="ja">経理スペシャリスト兼ティーチング・アシスタント（台湾）</span><span class="en">Accounting Specialist &amp; Teaching Assistant, Taiwan</span><span class="zh">會計專員兼助教（台灣）</span></p>
+          <ul class="ja"><li>経理業務全般を担当</li><li>授業後の補習指導および学習支援</li></ul>
+          <ul class="en"><li>Handled full-cycle accounting operations</li><li>Provided after-class tutoring and learning support</li></ul>
+          <ul class="zh"><li>負責全般會計作業</li><li>提供課後輔導與學習支援</li></ul>
+        </div>
+
+
+        <div class="job">
+          <div class="job-head"><h3><span class="ja">建鈞聯合會計師事務所</span><span class="en">Jianjun United CPA Firm</span><span class="zh">建鈞聯合會計師事務所</span></h3><span class="date">2013.10 – 2013.11</span></div>
+          <p class="role"><span class="ja">会計アソシエイト（台湾）</span><span class="en">Accounting Associate, Taiwan</span><span class="zh">會計專員（台灣）</span></p>
+          <ul class="ja"><li>記帳および会計帳簿の作成</li><li>税務申告書の作成・申告</li></ul>
+          <ul class="en"><li>Handled bookkeeping and accounting records</li><li>Prepared and filed tax returns</li></ul>
+          <ul class="zh"><li>負責記帳及會計帳務處理</li><li>辦理稅務申報</li></ul>
+        </div>
+
+
+        <div class="job">
+          <div class="job-head"><h3><span class="ja">誠泰聯合會計師事務所</span><span class="en">Chengtai United CPA Firm</span><span class="zh">誠泰聯合會計師事務所</span></h3><span class="date">2011.07 – 2011.09</span></div>
+          <p class="role"><span class="ja">会計アソシエイト（台湾）</span><span class="en">Accounting Associate, Taiwan</span><span class="zh">會計專員（台灣）</span></p>
+          <ul class="ja"><li>記帳および会計帳簿の作成</li><li>税務申告書の作成・申告</li></ul>
+          <ul class="en"><li>Handled bookkeeping and accounting records</li><li>Prepared and filed tax returns</li></ul>
+          <ul class="zh"><li>負責記帳及會計帳務處理</li><li>辦理稅務申報</li></ul>
+        </div>
+      </div>
+    </details>
+
   </section>
 
   <section id="skills">
