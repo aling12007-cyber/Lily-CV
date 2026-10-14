@@ -78,6 +78,9 @@ p{margin:0 0 8px}
 .contact{font-size:14.5px;color:var(--muted)}
 footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text-align:center}
 
+/* Keep the résumé focused on highlighted experience; short-term roles remain in source but are not displayed. */
+.short-career-pair,.short-job-entry,details.short-job{display:none!important}
+.career-controls{display:none!important}
 </style>
 </head>
 <body>
@@ -120,14 +123,6 @@ footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text
 
   <section id="career">
     <h2><span class="ja">職務経歴</span><span class="en">Professional Experience</span><span class="zh">工作經歷</span></h2>
-    <div class="career-controls">
-      <button class="career-toggle" id="career-toggle" type="button" aria-expanded="false">
-        <span class="ja toggle-show">短期経歴をすべて表示</span><span class="ja toggle-hide" hidden>短期経歴をすべて非表示</span>
-        <span class="en toggle-show">Show all short-term roles</span><span class="en toggle-hide" hidden>Hide short-term role details</span>
-        <span class="zh toggle-show">展開所有短期經歷</span><span class="zh toggle-hide" hidden>隱藏短期經歷內容</span>
-      </button>
-    </div>
-
 <div class="job featured-job">
       <div class="job-head"><h3><span class="ja">台湾系ITハードウェアメーカーの日本法人</span><span class="en">Japan subsidiary of a Taiwanese IT hardware manufacturer</span><span class="zh">台灣 IT 硬體製造商日本子公司</span></h3><span class="date">2024.11 – <span class="ja">現在</span><span class="en">Present</span><span class="zh">至今</span></span></div>
       <p class="role"><span class="ja">シニア経理スペシャリスト（東京）</span><span class="en">Senior Accounting Specialist, Tokyo</span><span class="zh">資深會計專員（東京）</span></p>
