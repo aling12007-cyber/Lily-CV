@@ -85,11 +85,18 @@ footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text
 #career .short-role summary::-webkit-details-marker{display:none}
 #career .short-role summary::after{content:"＋";position:absolute;right:4px;top:14px;color:var(--muted)}
 #career .short-role[open] summary::after{content:"−"}
-#career .short-role .job-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:2px 10px}
-#career .short-role .job-head h3{font-size:15px;flex:0 1 auto}
-#career .short-role .job-head .role{font-size:13.5px;margin:0;flex:0 1 auto}
-#career .short-role .job-head .date{font-size:12.5px;margin-left:auto;white-space:nowrap}
+/* Keep every role's company, title, date and details in one consistent vertical order. */
+#career .short-role summary{padding:12px 28px 12px 0}
+#career .short-role .job-head{display:flex;flex-direction:column;align-items:stretch;gap:2px}
+#career .short-role .job-head h3{font-size:15px;flex:none;order:0}
+#career .short-role .job-head .role{font-size:13.5px;margin:0;flex:none;order:1}
+#career .short-role .job-head .date{font-size:12.5px;margin:0;white-space:normal;order:2}
 #career .short-role-content{padding:0 0 12px}
+#career .short-role-content ul{margin-top:0}
+#career .job.featured-job .job-head{display:flex;flex-direction:column;align-items:stretch;gap:2px}
+#career .job.featured-job .job-head h3{flex:none;order:0}
+#career .job.featured-job .job-head .date{margin:0;white-space:normal;order:1}
+#career .job.featured-job .role{margin:0 0 6px}
 #career .short-role-content ul{margin:0 0 4px;padding-left:1.2em}
 #career .short-role-content li{margin-block:2px}
 #career .career-controls{display:flex;justify-content:flex-end;margin:0 0 8px}
