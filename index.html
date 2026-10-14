@@ -81,17 +81,25 @@ footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text
 /* Short-term roles are hidden by default and shown together on request. */
 #career .short-career-pair{display:block}
 #career .short-role{border-bottom:1px solid var(--rule)}
-#career .short-role summary{display:block;cursor:pointer;list-style:none;padding:12px 0}
+#career .short-role summary{display:block;cursor:pointer;list-style:none;padding:12px 28px 12px 0;position:relative}
 #career .short-role summary::-webkit-details-marker{display:none}
-#career .short-role summary::after{content:"＋";float:right;color:var(--muted)}
+#career .short-role summary::after{content:"＋";position:absolute;right:4px;top:14px;color:var(--muted)}
 #career .short-role[open] summary::after{content:"−"}
-#career .short-role .job-head{gap:2px 10px}
-#career .short-role .job-head h3{font-size:15px}
-#career .short-role .job-head .role{font-size:13.5px}
-#career .short-role .job-head .date{font-size:12.5px}
+#career .short-role .job-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:2px 10px}
+#career .short-role .job-head h3{font-size:15px;flex:0 1 auto}
+#career .short-role .job-head .role{font-size:13.5px;margin:0;flex:0 1 auto}
+#career .short-role .job-head .date{font-size:12.5px;margin-left:auto;white-space:nowrap}
 #career .short-role-content{padding:0 0 12px}
 #career .short-role-content ul{margin:0 0 4px;padding-left:1.2em}
 #career .short-role-content li{margin-block:2px}
+#career .career-controls{display:flex;justify-content:flex-end;margin:0 0 8px}
+#career .career-toggle{font:500 13px var(--f-body);color:var(--accent);background:var(--page);border:1px solid var(--rule);border-radius:6px;padding:7px 12px;cursor:pointer}
+#career .career-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#career .job.featured-job .job-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:2px 10px}
+#career .job.featured-job .job-head h3{flex:0 1 auto}
+#career .job.featured-job .job-head .role{margin:0;flex:0 1 auto}
+#career .job.featured-job .job-head .date{margin-left:auto;white-space:nowrap}
+@media(max-width:600px){#career .short-role .job-head .date,#career .job.featured-job .job-head .date{margin-left:0}}
 </style>
 </head>
 <body>
@@ -284,6 +292,17 @@ footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text
   set(ok.indexOf(saved)>-1?saved:'ja');
   btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.l)})});
 
+  var career=document.getElementById('career');
+  var toggle=document.getElementById('career-toggle');
+  if(career && toggle){
+    toggle.addEventListener('click',function(){
+      var expand=toggle.getAttribute('aria-expanded')!=='true';
+      career.querySelectorAll('details.short-role').forEach(function(item){item.open=expand});
+      toggle.setAttribute('aria-expanded',String(expand));
+      toggle.querySelectorAll('.toggle-show').forEach(function(el){el.hidden=expand});
+      toggle.querySelectorAll('.toggle-hide').forEach(function(el){el.hidden=!expand});
+    });
+  }
 })();
 </script>
 </body>
