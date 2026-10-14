@@ -75,11 +75,14 @@ p{margin:0 0 8px}
 footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text-align:center}
 
 .short-job{border-bottom:1px solid var(--rule)}
-.short-job summary{display:block;cursor:pointer;list-style:none;padding:12px 34px 12px 0;position:relative}
+.career-controls{display:flex;justify-content:flex-end;margin:0 0 8px}
+.career-toggle{font:500 13px var(--f-body);color:var(--accent);background:var(--page);border:1px solid var(--rule);border-radius:6px;padding:7px 12px;cursor:pointer}
+.career-toggle:hover{border-color:var(--accent)}
+.career-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.short-job summary{display:block;cursor:default;list-style:none;padding:12px 0;position:relative}
 .short-job summary::-webkit-details-marker{display:none}
-.short-job summary::after{content:"＋";position:absolute;right:4px;top:12px;color:var(--muted);font-size:16px}
-.short-job[open] summary::after{content:"−"}
-.short-job summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.short-job summary::after{content:none}
+.short-job summary:focus-visible{outline:none}
 .short-job summary .job-head{gap:2px 12px}
 .short-job summary .role{margin:2px 0 0}
 .short-job summary.compact-bookkeeper{padding-block:7px}
@@ -132,6 +135,13 @@ footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text
 
   <section id="career">
     <h2><span class="ja">職務経歴</span><span class="en">Professional Experience</span><span class="zh">工作經歷</span></h2>
+    <div class="career-controls">
+      <button class="career-toggle" id="career-toggle" type="button" aria-expanded="false">
+        <span class="ja toggle-show">短期経歴をすべて表示</span><span class="ja toggle-hide" hidden>短期経歴をすべて非表示</span>
+        <span class="en toggle-show">Show all short-term roles</span><span class="en toggle-hide" hidden>Hide short-term role details</span>
+        <span class="zh toggle-show">展開所有短期經歷</span><span class="zh toggle-hide" hidden>隱藏短期經歷內容</span>
+      </button>
+    </div>
 
     <div class="job">
       <div class="job-head"><h3><span class="ja">台湾系ITハードウェアメーカーの日本法人</span><span class="en">Japan subsidiary of a Taiwanese IT hardware manufacturer</span><span class="zh">台灣 IT 硬體製造商日本子公司</span></h3><span class="date">2024.11 – <span class="ja">現在</span><span class="en">Present</span><span class="zh">至今</span></span></div>
@@ -320,6 +330,24 @@ footer{max-width:860px;margin:16px auto 0;font-size:12px;color:var(--muted);text
   var saved=null;try{saved=localStorage.getItem('lang')}catch(e){}
   set(ok.indexOf(saved)>-1?saved:'ja');
   btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.l)})});
+
+  var careerToggle=document.getElementById('career-toggle');
+  var shortJobs=document.querySelectorAll('#career details.short-job');
+  function updateCareerToggle(expanded){
+    careerToggle.setAttribute('aria-expanded',String(expanded));
+    careerToggle.querySelectorAll('.toggle-show').forEach(function(el){el.hidden=expanded});
+    careerToggle.querySelectorAll('.toggle-hide').forEach(function(el){el.hidden=!expanded});
+  }
+  careerToggle.addEventListener('click',function(){
+    var expand=careerToggle.getAttribute('aria-expanded')!=='true';
+    shortJobs.forEach(function(job){job.open=expand});
+    updateCareerToggle(expand);
+  });
+  shortJobs.forEach(function(job){
+    var summary=job.querySelector('summary');
+    summary.addEventListener('click',function(event){event.preventDefault()});
+    summary.removeAttribute('tabindex');
+  });
 })();
 </script>
 </body>
